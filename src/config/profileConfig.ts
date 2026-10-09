@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "无聊人士",
 
 	// 个人签名
-	bio: "天体...天体积为空洞",
+	bio: "天体...天体即为空洞",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons

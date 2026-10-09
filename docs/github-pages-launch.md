@@ -3,7 +3,7 @@
 ## 已采用的配置
 
 - 昵称：无聊人士。
-- 简介：天体...天体积为空洞（按你填写的原文保存）。
+- 简介：天体...天体即为空洞。
 - 博客名称：暂用“无聊人士的博客”；填写表格中名称仍待确定，可在 `src/config/siteConfig.ts` 修改 `title` 和 `navbar.title`。
 - 仓库：`https://github.com/693623649-border/Firefly`，从当前 Git `origin` 确认；GitHub API 确认默认分支是 `master`，仓库公开。
 - 部署平台：GitHub Pages。

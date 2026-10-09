@@ -45,14 +45,14 @@ export const siteConfig: SiteConfig = {
 	title: "无聊人士的博客",
 
 	// 站点副标题
-	subtitle: "天体...天体积为空洞",
+	subtitle: "天体...天体即为空洞",
 
 	// 站点 URL
 	site_url: "https://693623649-border.github.io",
 	base: "/Firefly/",
 
 	// 站点描述
-	description: "天体...天体积为空洞",
+	description: "天体...天体即为空洞",
 
 	// 站点关键词
 	keywords: ["无聊人士", "个人博客"],
