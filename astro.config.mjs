@@ -69,7 +69,7 @@ const adapter = process.env.CF_WORKERS
 export default defineConfig({
 	site: siteConfig.site_url,
 
-	base: "/",
+	base: siteConfig.base ?? "/",
 	trailingSlash: "always",
 
 	// 字体配置 - 只加载实际使用的字体，跳过未引用的以加快构建
@@ -238,8 +238,14 @@ export default defineConfig({
 			filter: (page) => {
 				// 根据页面开关配置过滤sitemap
 				const url = new URL(page);
-				const pathname = url.pathname;
+				const base = siteConfig.base ?? "/";
+				const pathname = url.pathname.startsWith(base)
+					? `/${url.pathname.slice(base.length)}`
+					: url.pathname;
 				if (pathname === "/dynamic/" && !siteConfig.pages.dynamic) {
+					return false;
+				}
+				if (pathname.startsWith("/projects/") && !siteConfig.pages.projects) {
 					return false;
 				}
 				if (pathname.startsWith("/gallery/") && !siteConfig.pages.gallery) {

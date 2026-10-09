@@ -33,6 +33,7 @@ export type SiteConfig = {
 	title: string;
 	subtitle: string;
 	site_url: string;
+	base?: string; // 子路径部署；根域名使用 /
 	description?: string; // 网站描述，用于生成 <meta name="description">
 	keywords?: string[]; // 站点关键词，用于生成 <meta name="keywords">
 

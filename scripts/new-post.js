@@ -17,7 +17,7 @@ const args = process.argv.slice(2);
 
 if (args.length === 0) {
 	console.error(`Error: No filename argument provided
-Usage: npm run new-post -- <filename>`);
+Usage: pnpm new-post <filename>`);
 	process.exit(1); // Terminate the script and return error code 1
 }
 
@@ -80,15 +80,15 @@ if (!fs.existsSync(dirPath)) {
 }
 
 const content = `---
-title: ${args[0]}
+title: ${JSON.stringify(args[0])}
 published: ${getDate()}
 description: ''
 image: ''
 tags: []
 category: ''
-draft: false
+draft: true
 lang: ''
-slug: ${slug}
+slug: ${JSON.stringify(slug)}
 ---
 `;
 

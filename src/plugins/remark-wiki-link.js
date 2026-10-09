@@ -8,6 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { slug } from "github-slugger";
 import matter from "gray-matter";
+import { siteConfig } from "../config/siteConfig";
 import { getApiUrlList, processCoverImageSync } from "../utils/image-utils";
 
 const POSTS_DIR = fileURLToPath(new URL("../content/posts/", import.meta.url));
@@ -55,7 +56,7 @@ function createPostUrl(contentPath) {
 		.map((segment) => encodeURIComponent(segment))
 		.join("/");
 
-	return `/posts/${encodedPath ? `${encodedPath}/` : ""}`;
+	return `${siteConfig.base ?? "/"}posts/${encodedPath ? `${encodedPath}/` : ""}`;
 }
 
 /**
